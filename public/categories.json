@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1, 
+    "name": "Technology", 
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "selected": false 
+    
+  }, 
+  {
+    "id": 2, 
+    "name": "Culture", 
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "selected": false  
+    
+  }, 
+  {
+    "id": 3, 
+    "name": "Fashion", 
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "selected": false  
+    
+  }, 
+  {
+    "id": 4, 
+    "name": "Travel", 
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "selected": false  
+    
+  }, 
+  {
+    "id": 5, 
+    "name": "Science", 
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "selected": false  
+    
+  }, 
+  {
+    "id": 6, 
+    "name": "Entertainment", 
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "selected": false    
+  }
+]
