@@ -1,11 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
-// import categories json
-import Categories from '../public/categories.json';
+import React from 'react'
+import { render } from 'react-dom'
+import { createStore } from 'redux'
+import reducer  from './reducers'
+import App from './App'
+import './index.css'
 
-ReactDOM.render(
-  <App categories={Categories} />,
+const store = createStore(reducer)
+
+render(
+  <App {...store} />,
   document.getElementById('root')
 );
+
+store.subscribe(render());
+render();

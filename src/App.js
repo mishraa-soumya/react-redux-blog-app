@@ -1,41 +1,48 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import Header from './components/Header.js'
+import AddCategory from './containers/AddCategory.js'
+import VisibleCategoryList from './containers/VisibleCategoryList.js'
+import Footer from './components/Footer.js'
+import _ from 'lodash';
 import './App.css';
 
-import Header from './components/Header.jsx';
-
-import CategoryTable from './components/CategoryTable';
-import PostTable from './components/PostTable.jsx';
-
-import _ from 'lodash';
-
-class App extends Component {
+// class App extends Component {
   
-  constructor (props) {
-    super(props);
-    this.state = {
-        category: ''
-      };
-    this.handleUserInput = this.handleUserInput.bind(this);
-  }
+//   constructor (props) {
+//     super(props);
+//     this.state = {
+//         category: ''
+//       };
+//     this.handleUserInput = this.handleUserInput.bind(this);
+//   }
 
-  handleUserInput(selectedCategory) {
-      this.setState({
-          category: selectedCategory
-      });
-   }
+//   handleUserInput(selectedCategory) {
+//       this.setState({
+//           category: selectedCategory
+//       });
+//    }
 
-  render () {
+//   render () {
 
-    return (
-      <div>
-        <Header />
-        <CategoryTable blogCategories={this.props.categories} selectedCategory={this.state.category} onUserInput={this.handleUserInput} />
-        { this.state.category != '' && 
-          <PostTable category={this.state.category} />
-        }
-      </div>
-    );
-  }
-}
+//     return (
+//       <div>
+//         <Header />
+//         <CategoryTable blogCategories={this.props.categories} selectedCategory={this.state.category} onUserInput={this.handleUserInput} />
+//         { this.state.category != '' && 
+//           <PostTable category={this.state.category} />
+//         }
+//       </div>
+//     );
+//   }
+// }
+
+const App = ({ store }) => (
+  <div>
+    <Header />
+    <AddCategory {...store} />
+    <VisibleCategoryList />
+    <Footer />
+  </div>
+)
 
 export default App;
