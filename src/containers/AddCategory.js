@@ -1,8 +1,9 @@
 import React from 'react'
 import { addCategory } from '../actions'
+import { Button } from 'react-bootstrap'
 
-let AddCategory = ({ store }) => {
-    let input
+const AddCategory = ({store}) => {
+    let input;
     return (
        <div>
            <form onSubmit={ e => {
@@ -11,13 +12,15 @@ let AddCategory = ({ store }) => {
                    return
                }
                store.dispatch(addCategory(input.value))
+               console.log(store.getState());
                input.value = ''
            }}>
-              <input ref={ node => {
-                input = node }} /> 
-                <button type="submit">
-                    Add Category
-                </button>
+              <label>Enter Category</label>
+              <input placeholder="Enter text"
+                    ref={ node => {
+                    input = node }}
+              /> 
+             <Button bsStyle="primary" type="submit">Add Category</Button>
            </form>
        </div> 
     );

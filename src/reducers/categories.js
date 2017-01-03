@@ -15,7 +15,7 @@ const categories = (state = [], action) => {
         case 'ADD_CATEGORY':
             return [
                 ...state,
-                category({}, action)
+                category(undefined, action)
             ]
         default:
             return state
