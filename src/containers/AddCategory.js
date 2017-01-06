@@ -1,8 +1,9 @@
 import React from 'react'
 import { addCategory } from '../actions'
 import { Button } from 'react-bootstrap'
+import { connect } from 'react-redux'
 
-const AddCategory = ({store}) => {
+let AddCategory = ({dispatch}) => {
     let input;
     return (
        <div>
@@ -11,8 +12,7 @@ const AddCategory = ({store}) => {
                if(!input.value.trim()){
                    return
                }
-               store.dispatch(addCategory(input.value))
-               console.log(store.getState());
+               dispatch(addCategory(input.value))
                input.value = ''
            }}>
               <label>Enter Category</label>
@@ -25,5 +25,18 @@ const AddCategory = ({store}) => {
        </div> 
     );
 }
+// AddCategory = connect(
+//     state => {
+//         return {};
+//     },
+//     dispatch => {
+//         return { dispatch }
+//     }
+//      )(AddCategory);
+// AddCategory = connect(null,null)(AddCategory);   
 
+// above pattern can be reduced to below, as there are no props using state, 
+// and dispatch is injected still if nothing is passed
+
+AddCategory = connect()(AddCategory);
 export default AddCategory

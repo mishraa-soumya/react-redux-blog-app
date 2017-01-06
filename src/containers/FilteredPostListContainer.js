@@ -13,11 +13,16 @@ class FilteredPostListContainer extends Component {
   constructor (props) {
     super(props);
     console.log(this.props.params);
-    const categoryId = parseInt(this.props.params.id);
+    const categoryId = parseInt(this.props.params.id,10);
     console.log(categoryId);
     this.state = {
       selectedCategory: categoryId
     };
+    console.log(this.state.selectedCategory);
+  }
+  
+  componentDidMount () {
+
   }
 
   render () {
